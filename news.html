@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>百度新闻</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/news.css">
+	<link rel="stylesheet" href="font/iconfont.css">
+	<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header class="cf">
+			<a href="#" class="logo"><i class="iconfont">&#xe7df;</i></a>
+			<a href="#" class="user"><i class="iconfont">&#xe60c;</i></a>
+			<a href="#" class="more"><i class="iconfont">&#xe61e;</i></a>
+			<a href="#" class="search"><i class="iconfont">&#xe6a3;</i></a>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="#">精选</a><i></i></li>
+				<li><a href="#">百家</a><i></i></li>
+				<li><a href="#">本地</a><i></i></li>
+				<li><a href="#">娱乐</a><i></i></li>
+				<li><a href="#">社会</a><i></i></li>
+				<li><a href="#">军事</a><i></i></li>
+				<li><a href="#">女人</a><i></i></li>
+				<li><a href="#">搞笑</a><i></i></li>
+				<li><a href="#">互联网</a><i></i></li>
+				<li><a href="#">科技</a><i></i></li>
+				<li><a href="#">更多</a></li>
+			</ul>
+		</nav>
+		<article class="news-main">
+		<!-- 自动添加内容 -->
+			<ul class="news-lists">
+				<!-- <li class="news-list">
+					<div class="newsimg">
+						<img src="img/1.jpg" width="100%">
+					</div>
+					<div class="newscontent">
+						<h1>《口袋妖怪：日月》最新情报：究极异兽实力强劲可以被玩家捕捉</h1>
+						<p><span class="newstime">2016年1月10日</span><span class="newssrc">新闻网</span></p>
+					</div>
+				</li> -->
+			</ul>
+		</article>
+	</div>
+    <script>
+    	$(document).ready(function(){
+    		var deviceWidth = $('body').width();
+
+    		$('nav li').each(function(index,item){
+    			if($(this).find('a').html().split('').length>2){
+    				$(this).width(deviceWidth/3);
+    			}else{
+    				$(this).width(deviceWidth/6);
+    			}
+    		});
+    	});
+    </script>
+    <script type="text/javascript" src="js/news.js"></script>
+</body>
+</html>
